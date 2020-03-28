@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid 19 Cases Monitor</title>
+        <link rel="icon" href="/icon.ico" type="image/ico">
+        <style type="text/css"> 
+            #ctn{
+                text-align: center;
+            }
+            .stitle {
+                font-size: 20px;
+            } 
+            .scountry{
+                font-size: 40px;
+            }
+            .nb{
+                min-height: 50px;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            #bbutton{
+                position: fixed;
+                bottom: 0px;
+                padding: 5px;
+                left: 0px;
+                right: 0px;
+                text-align: center;
+                background-color: rgb(142, 197, 179);
+            }
+            a{
+                text-decoration: none;
+            }
+            audio{
+                display: none;
+            }
+            #loopindic{ 
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                width: 10px;
+                height: 10px; 
+                border-radius: 50%;
+            }
+            .binfo{
+                margin-top: 5px;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body> 
+        <div id="ctn">
+            <div class="scountry"> </div>
+            <div class="stitle">Coronavirus Cases:</div>
+            <div class="nb bcases"></div>
+            <div class="stitle">Deaths:</div>
+            <div class="nb bdeath"></div>
+            <div class="stitle">Recovered:</div>
+            <div class="nb brec"></div>
+            
+
+        </div>
+        <div id="loopindic"></div> 
+        <div id="bbutton">
+            <select id="countryselector" onchange="showBySelected()"></select>  
+            <div class="binfo">
+                Data Source : <a href="#" onclick="openBrowser('https://www.worldometers.info/coronavirus/#countries')">Worldometers.info</a>
+            </div>
+            
+        </div>
+        <div id="testresult"></div>
+        <audio controls>
+            <source src="/Beeper.wav" type="audio/wav">  
+          </audio>
+
+        <script src="/jquery-3.3.1.min.js"></script>
+        <script src="/mypage.js"></script>
+    </body>
+</html>

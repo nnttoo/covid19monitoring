@@ -1,0 +1,12 @@
+{
+  "name": "covid19monitoring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd src \n make brun",
+    "buildwin": "cd src \n make win32"
+  },
+  "author": "",
+  "license": "ISC"
+}
