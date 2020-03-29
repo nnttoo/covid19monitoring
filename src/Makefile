@@ -37,6 +37,9 @@ win32:	bwicon32
 	-o $(DIRTARGET)/win32/$(BINFILE).exe
 	rm rice-box.go
 	rm icon_windows.syso
+mac:
+	GOOS=linux GOARCH=amd64 \
+	go build  -o $(DIRTARGET)/macos/$(BINFILE)_darwin
 
 bwicon32:
 	i686-w64-mingw32-windres icon.rc -o icon_windows.syso
